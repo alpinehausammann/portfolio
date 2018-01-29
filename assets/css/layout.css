@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(141deg, #2cb5e8 0%, #1fc8db 51%, #0fb8ad 75%);
+}
+
+.container > #self-img {
+  text-align: center;
+  height: 150px;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-areas: "header header header" "nav main main" "nav footer footer";
+  grid-template-rows: 1fr 5fr 50px;
+  grid-template-columns: [nav-start] 1fr [column1-end column2-start] 3fr [column2-end column3-start] 1fr;
+}
+
+.grid aside {
+  display: block;
+  border-width: thick;
+  border-color: green;
+  height: 100vh;
+  border-width: 1px;
+  grid-area: header;
+}
+
+.grid aside ul {
+  padding: 100px 50px;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+}
+
+.grid aside ul li {
+  padding: 10px 10px;
+}
+
+.grid aside ul li a {
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 28px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.grid aside ul a:hover {
+  border-radius: 10px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), white);
+  color: black;
+}
+
+.grid aside ul a:hover a {
+  color: black;
+}
+
+.grid #top-banner {
+  margin: 10px;
+  padding: 0;
+  display: block;
+  float: right;
+}
+
+.grid #top-banner #main-logo {
+  float: right;
+  margin: 0 auto;
+}
+
+.grid #top-banner #main-logo #logo {
+  width: 100%;
+  margin: 0 auto;
+  padding: inherit;
+}
+
+.grid #top-banner #main-logo .credit {
+  display: block;
+}
+
+#self-img {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 10px;
+  height: 170px;
+  border-radius: 100%;
+}
+
+main {
+  display: block;
+  grid-area: main;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #4a5f69, #4a5f69;
+}
+
+.container > img {
+  display: block;
+  padding: 20px;
+}
