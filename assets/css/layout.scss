@@ -1,116 +1,154 @@
-*{
+* {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
-html,body{
+body,
+html {
+    font-family:'Poiret One', cursive;
     margin: 0;
     padding: 0;
-    width:100%;
-    height:100%;
-    background: linear-gradient(141deg, #2cb5e8 0%,  #1fc8db 51%,#0fb8ad 75%);
+    width: 100%;
+    height: 100%;
+    // font-family: 'Rubik', sans-serif;
+    background: linear-gradient(141deg, #2cb5e8 0%, #1fc8db 51%,#0fb8ad 75%);
+    // background: radial-gradient(rgb(240, 240, 240)25%,rgb(218, 167, 131),rgba(0,0,0,.4));
     // background-image:url("../img/home_bg.jpg")
     // background: linear-gradient(to top right,rgb(0, 0, 0),rgb(78, 118, 128),rgb(0, 114, 232)20%,rgb(23, 130, 191),rgb(255, 255, 255),rgb(59, 102, 213) 75%);
 }
 
-.container>#self-img{
+.container > #self-img {
     text-align: center;
-    height:150px;
+    height: 150px;
     border-radius: 100%;
     margin: 0 auto;
-
     // height:auto;
     // width:auto;
 }
 
-.grid{
-    display:grid;
-    height:100vh;
-    grid-template-areas:"header header header"
-                        "nav main main"
-                        "nav footer footer";
-    grid-template-rows:1fr 5fr 50px;
-    grid-template-columns: [nav-start]1fr [column1-end column2-start]3fr [column2-end column3-start]1fr;
-    aside{
-        display:block;
-        border-width: thick;
-        border-color: green;
-        // box-shadow: 0 10px 0 0 black;
+.grid {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "header header header header"
+                         "nav nav nav nav"
+                         "aside main main main"
+                         "aside footer footer footer";
+    grid-template-rows: 100px 50px 10fr ;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    // grid-template-columns: [column1-start].3fr [column1-end column2-start]3fr [column2-end column3-start]1fr;
+    header {
+        justify-content: center;
+        font-size: 30px;
+        grid-area:header;
+        width: 100%;
+        display: block;
+        padding: 0;
+        background: white;
+        border-bottom: 1px;
+        box-shadow: 0 0 10px, rgba(0,0,0,.2);
 
-        height:100vh;
-        border-width:1px;
-        grid-area: header;
-        // background: linear-gradient(to bottom left, rgb(0, 0, 0), rgba(0, 0, 0, 0.60));
-        // background: linear-gradient(to bottom left, rgb(255, 255, 255), rgba(255, 255, 255, 0.60));
-        ul{
-            padding:100px 50px;
+        .container#main-logo {
             display: block;
-            margin: 0 auto;
+            padding: 20px;
+            margin: inherit;
             width: auto;
+            text-align: center;
+            align-self: center;
+            color: black;
 
-            li{
+        }
+}
+nav {
+    // border-top: 2px solid grey;
+    // border-bottom: 2px solid grey;
+    text-align: center;
+    margin: 0 auto;
+    padding: auto;
+    grid-area: nav;
+    width: 100%;
+    box-shadow: 10px 15px 10px 0 black;
+    // background: linear-gradient(to bottom left, rgb(0, 0, 0), rgba(0, 0, 0, 0.60));
+    // background: linear-gradient(to bottom,rgba(0,0,0, 0.60), rgb(0,0,0));
+    background: radial-gradient(rgba(0,0,0,0),rgba(0,0,0, 0.60));
 
-                padding: 10px 10px;
-                a{
-                    padding:10px;
-                    font-family: sans-serif;
-                    font-size: 28px;
-                    text-decoration: none;
-                    font-weight: bold;
-                    color:white;
-                }
-            }
-            a:hover{
-                border-radius:10px;
-                background: linear-gradient(to right, rgba(255, 255, 255,.2), rgba(255,255,255,1));
-                color:black;
-                a{
-                    color:black;
-                }
+    ul {
+        display: block;
+        background-color: white;
+        padding: 20px;
 
+        li {
+            display: inline;
+            padding: 10px;
+
+            a {
+                padding: inherit;
+                font-size: 20px;
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
             }
         }
+
+        a:hover {
+            border-radius: 10px;
+            // background: linear-gradient(to right, rgba(255, 255, 255,.2), rgba(255,255,255,1));
+            background-color: rgb(124, 220, 250);
+            color: white;
+        }
     }
-    #top-banner{
-        margin:10px;
-        padding: 0;
-        display:block;
-        // grid-area:header;
-        // background: linear-gradient(to right, rgba() );
-        float:right;
-        #main-logo{
-            float:right;
-            margin:0 auto;
-            #logo{
-            width:100%;
-            margin:0 auto;
-            padding:inherit;
+}
+}
+
+aside{
+    border-top:2px 0 black;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin:10px 0;
+
+    ul {
+        margin-top: 200px;
+        display: block;
+
+        li {
+            display: block;
+            padding: 20px;
+
+            a {
+                padding: inherit;
+                font-size: 30px;
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
             }
-            .credit{
-            display:block;
-            }
+        }
+
+        a:hover {
+            border-radius: 10px;
+            // background: linear-gradient(to right, rgba(255, 255, 255,.2), rgba(255,255,255,1));
+            background-color: rgba(124, 220, 250, .0);
+            color: white;
         }
     }
 }
 
-#self-img{
+#self-img {
     display: block;
     margin: 0 auto;
-    padding:10px 10px;
-    height:170px;
+    padding: 10px;
+    height: 170px;
     border-radius: 100%;
 }
 
-main{
+main {
+    background: rgba(255,255,255,.4);
     display: block;
-    grid-area:main;
-    margin:15px;
-    border-radius:10px;
-
-    background-color:rgba(74, 95, 105, 1),rgba(74, 95, 105, 1);
+    grid-area: main;
+    margin: 30px 10px 0 10px;
+    border-radius: 2px;
+    background-color: rgba(74, 95, 105, 1),rgba(74, 95, 105, 1);
 }
 
-.container > img{
+.container > img {
     display: block;
     padding: 20px;
 }
