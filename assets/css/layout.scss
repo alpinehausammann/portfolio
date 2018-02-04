@@ -5,10 +5,10 @@
 
 body,
 html {
-    font-family:'Poiret One', cursive;
+    font-family: 'Poiret One', cursive;
     margin: 0;
     padding: 0;
-    width: 100%;
+    // width: 100%;
     height: 100%;
     // font-family: 'Rubik', sans-serif;
     background: linear-gradient(141deg, #2cb5e8 0%, #1fc8db 51%,#0fb8ad 75%);
@@ -29,84 +29,79 @@ html {
 .grid {
     display: grid;
     height: 100vh;
-    grid-template-areas: "header header header header"
-                         "nav nav nav nav"
-                         "aside main main main"
-                         "aside footer footer footer";
-    grid-template-rows: 100px 50px 10fr ;
-    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-areas: "header header header" "nav nav nav" "aside main main" "footer footer footer";
+    // grid-template: [row1-start]"header header header header" 150px [row1-end]
+    //                [row2-start]"nav nav nav nav" 50px[row2-end]
+    //                [row3-start]"aside main main main" 1fr[row3-end]
+    //                [row4-start]"aside footer footer footer" 100px[row4-end]
+    //                / auto;
+    grid-template-rows: auto 50px auto 100px;
+    grid-template-columns: 1fr 2fr 2fr;
     // grid-template-columns: [column1-start].3fr [column1-end column2-start]3fr [column2-end column3-start]1fr;
     header {
         justify-content: center;
         font-size: 30px;
-        grid-area:header;
-        width: 100%;
+        grid-area: header;
         display: block;
         padding: 0;
         background: white;
-        border-bottom: 1px;
-        box-shadow: 0 0 10px, rgba(0,0,0,.2);
+
 
         .container#main-logo {
             display: block;
-            padding: 20px;
+            padding: 20px 0 10px;
             margin: inherit;
-            width: auto;
             text-align: center;
             align-self: center;
             color: black;
-
+            justify-content: center;
         }
-}
-nav {
-    // border-top: 2px solid grey;
-    // border-bottom: 2px solid grey;
-    text-align: center;
-    margin: 0 auto;
-    padding: auto;
-    grid-area: nav;
-    width: 100%;
-    box-shadow: 10px 15px 10px 0 black;
-    // background: linear-gradient(to bottom left, rgb(0, 0, 0), rgba(0, 0, 0, 0.60));
-    // background: linear-gradient(to bottom,rgba(0,0,0, 0.60), rgb(0,0,0));
-    background: radial-gradient(rgba(0,0,0,0),rgba(0,0,0, 0.60));
+    }
 
-    ul {
-        display: block;
-        background-color: white;
+    nav {
+        // border-top: 2px solid grey;
+        // border-bottom: 2px solid grey;
+        text-align: center;
         padding: 20px;
+        grid-area: nav;
+        width: 100%;
+        background-color: white;
 
-        li {
-            display: inline;
-            padding: 10px;
+        ul {
+            display: block;
+            background-color: white;
 
-            a {
-                padding: inherit;
-                font-size: 20px;
-                text-decoration: none;
-                font-weight: bold;
-                color: black;
+            li {
+                display: inline;
+                padding: 10px;
+
+                a {
+                    padding: inherit;
+                    font-size: 20px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: black;
+                }
+
+                a:hover {
+                    border-radius: 10px;
+                    text-decoration: underline;
+                }
             }
-        }
-
-        a:hover {
-            border-radius: 10px;
-            // background: linear-gradient(to right, rgba(255, 255, 255,.2), rgba(255,255,255,1));
-            background-color: rgb(124, 220, 250);
-            color: white;
         }
     }
 }
-}
 
-aside{
-    border-top:2px 0 black;
+aside {
+    display: block;
+    border-top: 2px 0 black;
     background-color: rgb(255, 255, 255);
     text-align: center;
-    margin:10px 0;
+    // margin:10px 0;
+    grid-area: aside;
+    box-shadow: -20px 10px 20px black;
 
     ul {
-        margin-top: 200px;
         display: block;
 
         li {
@@ -124,31 +119,42 @@ aside{
 
         a:hover {
             border-radius: 10px;
-            // background: linear-gradient(to right, rgba(255, 255, 255,.2), rgba(255,255,255,1));
-            background-color: rgba(124, 220, 250, .0);
-            color: white;
+            text-decoration: underline;
         }
     }
-}
-
-#self-img {
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    height: 170px;
-    border-radius: 100%;
 }
 
 main {
     background: rgba(255,255,255,.4);
     display: block;
     grid-area: main;
-    margin: 30px 10px 0 10px;
+    margin: 20px;
     border-radius: 2px;
     background-color: rgba(74, 95, 105, 1),rgba(74, 95, 105, 1);
 }
 
-.container > img {
+#main-logo > .container {
+    margin: 0 auto;
+    line-height: 136px;
+    width: auto;
     display: block;
-    padding: 20px;
+    text-align: center;
+    vertical-align: center;
+    width: 156px;
+    height: 156px;
+    border-radius: 100%;
+    background: radial-gradient(white,hsla(0, 0%, 80%, 0.88));
+    // height:auto;
+    // width:auto;
+}
+
+.container img {
+    height: 100px;
+    // display: inline;
+    text-align: center;
+    vertical-align: middle;
+}
+
+nav.container {
+            border-bottom: 10px solid grey;
 }
