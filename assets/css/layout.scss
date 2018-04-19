@@ -11,16 +11,16 @@ html{
 .grid {
     display: grid;
     height: 100vh;
-    grid-template-areas: "header header nav"
-                         "aside main main"
-                         "footer footer footer";
+    grid-template-areas: "header header nav nav"
+                         "main main main aside"
+                         "footer footer footer footer";
     // grid-template: [row1-start]"header header header header" 150px [row1-end]
     //                [row2-start]"nav nav nav nav" 50px[row2-end]
     //                [row3-start]"aside main main main" 1fr[row3-end]
     //                [row4-start]"aside footer footer footer" 100px[row4-end]
     //                / auto;
-    grid-template-rows: 120px auto 100px; //nav 80px
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px auto 100px; //nav 80px
+    grid-template-columns: 1fr 4fr 2fr;
 }
 
 .main-header{
@@ -29,7 +29,7 @@ html{
     .logo-top{
         display:inline;
         .adlogo{
-            height:100px;
+            height:70px;
 
         }
     }
@@ -37,17 +37,18 @@ html{
 
 .main-nav__top{
     grid-area: nav;
-    width:30vw;
+    // width:40vw;
     margin:0 auto;
     display:inline;
     .main-nav__top__list{
         text-align: center;
-        margin:90px auto;
+        margin:40px auto;
         display:block;
         li{
             display:inline;
+            padding-left:15px;
             a{
-                padding: 0 0 0 5px;
+                padding:0 5px 0 5px;
             }
         }
     }
@@ -55,6 +56,7 @@ html{
 
 .main-aside{
     grid-area: aside;
+    display:none;
     .main-aside__list{
         margin: 10px 10px;
         height:80%;
@@ -65,6 +67,35 @@ html{
         }
 
     }
+}
+
+.main-content{
+    grid-area:main;
+    margin:10px;
+    padding:10px;
+    .main-content-title{
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .main-content__section{
+        text-align: center;
+        margin:20px 0;
+        background-color:rgb(149, 177, 240);
+        padding:10px;
+        width:50%;
+        .section__title{
+            font-size:2rem;
+            font-family:sans-serif;
+            font-weight: bold;
+        }
+        p{
+            font-family:sans-serif;
+            font-size:1rem;
+            padding:20px 0 0 10px;;
+        }
+    }
+
 }
 
 .main-footer{

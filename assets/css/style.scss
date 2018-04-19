@@ -29,6 +29,7 @@ a{
 
 .logo-top{
     font-size:2rem;
+
 }
 
 .main-nav__top{
@@ -57,6 +58,11 @@ a{
         }
     }
 
+}
+
+.main-content{
+    background:radial-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.8));
+    border-radius: 10px;
 }
 
 .main-footer{
