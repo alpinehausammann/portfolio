@@ -33,7 +33,7 @@ a {
 
 .main-nav__top .main-nav__top__list li a {
   font-size: 1.5rem;
-  color: black;
+  color: white;
   list-style-type: none;
   text-decoration: none;
 }
@@ -52,5 +52,19 @@ a {
 }
 
 .main-footer {
+  position: relative;
   background-color: white;
+  display: inline;
+}
+
+.main-footer .copyright {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+  height: inherit;
+}
+
+.main-footer .copyright p {
+  width: auto;
 }

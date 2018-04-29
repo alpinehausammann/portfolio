@@ -12,7 +12,7 @@ html {
   height: 100vh;
   grid-template-areas: "header header nav nav" "main main main aside" "footer footer footer footer";
   grid-template-rows: 80px auto 100px;
-  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-columns: 1fr 4fr 2fr 1fr;
 }
 
 .main-header {
@@ -25,16 +25,17 @@ html {
 }
 
 .main-header .logo-top .adlogo {
+  vertical-align: bottom;
   height: 70px;
 }
 
 .main-nav__top {
   grid-area: nav;
-  margin: 0 auto;
   display: inline;
 }
 
 .main-nav__top .main-nav__top__list {
+  width: 100%;
   text-align: center;
   margin: 40px auto;
   display: block;
@@ -42,7 +43,7 @@ html {
 
 .main-nav__top .main-nav__top__list li {
   display: inline;
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 .main-nav__top .main-nav__top__list li a {
@@ -51,7 +52,6 @@ html {
 
 .main-aside {
   grid-area: aside;
-  display: none;
 }
 
 .main-aside .main-aside__list {

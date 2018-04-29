@@ -20,7 +20,7 @@ html{
     //                [row4-start]"aside footer footer footer" 100px[row4-end]
     //                / auto;
     grid-template-rows: 80px auto 100px; //nav 80px
-    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-columns: 1fr 4fr 2fr 1fr;
 }
 
 .main-header{
@@ -29,6 +29,7 @@ html{
     .logo-top{
         display:inline;
         .adlogo{
+            vertical-align: bottom;
             height:70px;
 
         }
@@ -38,15 +39,16 @@ html{
 .main-nav__top{
     grid-area: nav;
     // width:40vw;
-    margin:0 auto;
+    // margin:0 auto;
     display:inline;
     .main-nav__top__list{
+        width:100%;
         text-align: center;
         margin:40px auto;
         display:block;
         li{
             display:inline;
-            padding-left:15px;
+            padding-left:12px;
             a{
                 padding:0 5px 0 5px;
             }
@@ -56,7 +58,7 @@ html{
 
 .main-aside{
     grid-area: aside;
-    display:none;
+    // display:none;
     .main-aside__list{
         margin: 10px 10px;
         height:80%;

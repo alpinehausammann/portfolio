@@ -39,7 +39,8 @@ a{
         li{
             a{
                 font-size: 1.5rem;
-                color:black;
+                // color:black;
+                color:white;
                 list-style-type: none;
                 text-decoration: none;
             }
@@ -66,6 +67,17 @@ a{
 }
 
 .main-footer{
+    position:relative;
     background-color:white;
-
+    display:inline;
+    .copyright{
+        position:absolute;
+        bottom:10px;
+        text-align: center;
+        width:100%;
+        height:inherit;
+        p{
+            width:auto;
+        }
+    }
 }
